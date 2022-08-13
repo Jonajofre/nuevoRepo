@@ -61,7 +61,7 @@ const borrarCel = async (req, res) =>{
 
     const consultaAxios = async (req, res) =>{
         try {
-            const respuesta = await axios.get('https://swapi.dev/api/films/1/',{timeout: 10000})
+            const respuesta = await axios.get('https://swapi.dev/api/films/',{timeout: 10000})
             res.json({status: respuesta.status, data: respuesta.data})
         } catch (error) {
             res.json({status: error.response.status, data: error.response.data})
